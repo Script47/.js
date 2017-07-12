@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage Example</title>
+</head>
+<body>
+
+<h1 align="center">Open the Console!</h1>
+
+<script type="text/javascript" src="../src/local_storage.js"></script>
+<script>
+    if (!ls.exists('name'))
+        ls.set.single('name', 'Script47');
+
+    if (ls.exists('name'))
+        ls.set.multiple({
+            1: 'red',
+            2: 'green',
+            3: 'blue'
+        }, function () {
+            console.log('Favorite Colours have been added!');
+
+            setTimeout(function () {
+                ls.clear.single('name', function () {
+                    console.log('\'name\' has been cleared.');
+                });
+            }, 2500);
+
+            setTimeout(function () {
+                 ls.clear.all(function () {
+                     console.log('ls has been cleared.');
+
+                     ls.set.json('persona', {
+                        name: 'Script47',
+
+                        favorite_colours: {
+                            1: 'red',
+                            2: 'green',
+                            3: 'blue'
+                        }
+                     }, function () {
+                         console.log(ls.get.json('persona').name);
+                     });
+                 });
+            }, 4000);
+        });
+</script>
+
+</body>
+</html>
