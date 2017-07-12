@@ -10,6 +10,8 @@
 
 <script type="text/javascript" src="../src/local_storage.js"></script>
 <script>
+    var ls = new local_storage();
+    
     if (!ls.exists('name'))
         ls.set.single('name', 'Script47');
 
