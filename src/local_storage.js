@@ -2,6 +2,7 @@
  * @author Script47
  * @version 12/07/2017 (1.0)
  * @github https://github.com/Script47/.js/blob/master/src/local_storage.js
+ * @example https://github.com/Script47/.js/blob/master/examples/local_storage.html
  */
 function local_storage() {
     this.set = {
