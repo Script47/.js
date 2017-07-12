@@ -1,7 +1,7 @@
 /**
  * @author Script47
  * @version 12/07/2017 (1.0)
- * @github https://github.com/Script47/.js/src/local_storage.js
+ * @github https://github.com/Script47/.js/blob/master/src/local_storage.js
  */
 function local_storage() {
     this.set = {
