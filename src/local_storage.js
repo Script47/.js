@@ -45,9 +45,8 @@ function local_storage() {
         },
 
         multiple: function (a, callback) {
-            for (var key in a)
-                if (a.hasOwnProperty(key))
-                    localStorage.removeItem(key);
+            for (var i = 0; i < a.length; i++)
+                localStorage.removeItem(a[i]);
 
             return (typeof callback === 'function') ? callback() : true;
         },
